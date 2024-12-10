@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://boqs6x2r3xd04"]
+
+[ext_resource type="Script" path="res://addons/2d_shapes/shapes/Triangle.gd" id="1_hifo1"]
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_rlj53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ov2m"]
+size = Vector2(30, 40)
+
+[node name="Scene" type="Node2D"]
+position = Vector2(333, 210)
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Player"]
+gravity_scale = 0.0
+script = ExtResource("1_rlj53")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/RigidBody2D"]
+shape = SubResource("RectangleShape2D_8ov2m")
+
+[node name="Triangle" type="Node2D" parent="Player/RigidBody2D"]
+script = ExtResource("1_hifo1")
+size = Vector2(30, 40)
+corner_radius = 0.0

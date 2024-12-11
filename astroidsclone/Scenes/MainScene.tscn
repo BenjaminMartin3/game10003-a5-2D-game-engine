@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://boqs6x2r3xd04"]
+[gd_scene load_steps=5 format=3 uid="uid://boqs6x2r3xd04"]
 
 [ext_resource type="Script" path="res://addons/2d_shapes/shapes/Triangle.gd" id="1_hifo1"]
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_rlj53"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ov2m"]
 size = Vector2(20, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmn8b"]
 
 [node name="Scene" type="Node2D"]
 metadata/_edit_lock_ = true
@@ -28,3 +30,38 @@ script = ExtResource("1_hifo1")
 size = Vector2(20, 30)
 corner_radius = 0.0
 metadata/_edit_lock_ = true
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="Boader 1" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Boader 1"]
+position = Vector2(652, -10)
+scale = Vector2(67.92, 1)
+shape = SubResource("RectangleShape2D_bmn8b")
+
+[node name="Boader 2" type="StaticBody2D" parent="Borders"]
+position = Vector2(0, 740)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Boader 2"]
+position = Vector2(652, -10)
+scale = Vector2(67.92, 1)
+shape = SubResource("RectangleShape2D_bmn8b")
+
+[node name="Boader 3" type="StaticBody2D" parent="Borders"]
+position = Vector2(-19, 771)
+scale = Vector2(0.0142008, 40.7878)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Boader 3"]
+position = Vector2(652, -10)
+scale = Vector2(67.92, 1)
+shape = SubResource("RectangleShape2D_bmn8b")
+
+[node name="Boader 4" type="StaticBody2D" parent="Borders"]
+position = Vector2(1281, 761)
+scale = Vector2(0.0142008, 40.7878)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Boader 4"]
+position = Vector2(652, -10)
+scale = Vector2(67.92, 1)
+shape = SubResource("RectangleShape2D_bmn8b")

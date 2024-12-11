@@ -8,13 +8,15 @@ public partial class Player : RigidBody2D
 	public int Speed = 100;
 
     [Export]
-    public float RotationSpeed = 1000; 
+    public float RotationSpeed = 1000;
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		// Vector2 to set up the movement of the player
-        Vector2 facingDirection = new Vector2 (0 ,0); 
+        Vector2 facingDirection = new Vector2 (0 ,0);
+
+        Vector2 playerLocation = GlobalPosition; 
 
         // 4 diagonal movements
         if (Rotation > 0 && Rotation < 1.5)
@@ -76,6 +78,5 @@ public partial class Player : RigidBody2D
         {
             ApplyTorque(-RotationSpeed);
         }
-
     }
 }

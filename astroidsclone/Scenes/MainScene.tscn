@@ -4,21 +4,27 @@
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_rlj53"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ov2m"]
-size = Vector2(30, 40)
+size = Vector2(20, 30)
 
 [node name="Scene" type="Node2D"]
-position = Vector2(333, 210)
+metadata/_edit_lock_ = true
 
 [node name="Player" type="Node2D" parent="."]
+position = Vector2(585, 323)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="Player"]
 gravity_scale = 0.0
 script = ExtResource("1_rlj53")
+Speed = 50
+RotationSpeed = 500.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/RigidBody2D"]
 shape = SubResource("RectangleShape2D_8ov2m")
+debug_color = Color(0, 0.73747, 0.850028, 0.42)
+metadata/_edit_lock_ = true
 
 [node name="Triangle" type="Node2D" parent="Player/RigidBody2D"]
 script = ExtResource("1_hifo1")
-size = Vector2(30, 40)
+size = Vector2(20, 30)
 corner_radius = 0.0
+metadata/_edit_lock_ = true

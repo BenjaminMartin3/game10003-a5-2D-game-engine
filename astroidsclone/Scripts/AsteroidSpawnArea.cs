@@ -9,20 +9,17 @@ public partial class AsteroidSpawnArea : Area2D
     [Export]
     private Node2D PrefabParent;
 
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
+    public override void _Ready()
     {
-        var random = new RandomNumberGenerator();
+        var spawnTimer = GetNode<Timer>("SpawnTimer");
+        spawnTimer.Start(2.5);
+        spawnTimer.Timeout += OnTimerTimeout;
+    }
 
-        float xLaunch = random.Randf();
-        float yLaunch = random.Randf();
-
-        Vector2 launchDirection = new Vector2(xLaunch, yLaunch);
-
+    private void OnTimerTimeout()
+    {
         RigidBody2D asteroid = Prefab.Instantiate<RigidBody2D>();
         PrefabParent.AddChild(asteroid);
         asteroid.GlobalPosition = this.GlobalPosition;
-        asteroid.ApplyForce(launchDirection * 50);
-
     }
 }

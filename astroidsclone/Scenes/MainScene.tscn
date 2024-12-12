@@ -141,19 +141,127 @@ debug_color = Color(0.996043, 0, 0.194257, 0.42)
 metadata/_edit_lock_ = true
 
 [node name="Asteroid Spawn Areas" type="Node2D" parent="."]
+position = Vector2(0, 20)
 
-[node name="Area2D" type="Area2D" parent="Asteroid Spawn Areas" node_paths=PackedStringArray("PrefabParent")]
-position = Vector2(300, -150)
+[node name="Spawn Area 1" type="Area2D" parent="Asteroid Spawn Areas" node_paths=PackedStringArray("PrefabParent")]
+position = Vector2(355, -165)
 rotation = 3.14159
 scale = Vector2(10, 10)
 script = ExtResource("6_bkhmc")
 Prefab = ExtResource("7_086tk")
 PrefabParent = NodePath("../../Asteroid Parent")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid Spawn Areas/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid Spawn Areas/Spawn Area 1"]
 shape = SubResource("RectangleShape2D_pipwy")
 debug_color = Color(4.42803e-06, 0.629309, 0.483867, 0.42)
 metadata/_edit_lock_ = true
+
+[node name="SpawnTimer" type="Timer" parent="Asteroid Spawn Areas/Spawn Area 1"]
+
+[node name="Spawn Area 2" type="Area2D" parent="Asteroid Spawn Areas" node_paths=PackedStringArray("PrefabParent")]
+position = Vector2(969, -164)
+rotation = 3.14159
+scale = Vector2(10, 10)
+script = ExtResource("6_bkhmc")
+Prefab = ExtResource("7_086tk")
+PrefabParent = NodePath("../../Asteroid Parent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid Spawn Areas/Spawn Area 2"]
+shape = SubResource("RectangleShape2D_pipwy")
+debug_color = Color(4.42803e-06, 0.629309, 0.483867, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="SpawnTimer" type="Timer" parent="Asteroid Spawn Areas/Spawn Area 2"]
+
+[node name="Spawn Area 3" type="Area2D" parent="Asteroid Spawn Areas" node_paths=PackedStringArray("PrefabParent")]
+position = Vector2(1431, 155)
+rotation = 3.14159
+scale = Vector2(10, 10)
+script = ExtResource("6_bkhmc")
+Prefab = ExtResource("7_086tk")
+PrefabParent = NodePath("../../Asteroid Parent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid Spawn Areas/Spawn Area 3"]
+shape = SubResource("RectangleShape2D_pipwy")
+debug_color = Color(4.42803e-06, 0.629309, 0.483867, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="SpawnTimer" type="Timer" parent="Asteroid Spawn Areas/Spawn Area 3"]
+
+[node name="Spawn Area 4" type="Area2D" parent="Asteroid Spawn Areas" node_paths=PackedStringArray("PrefabParent")]
+position = Vector2(1429, 523)
+rotation = 3.14159
+scale = Vector2(10, 10)
+script = ExtResource("6_bkhmc")
+Prefab = ExtResource("7_086tk")
+PrefabParent = NodePath("../../Asteroid Parent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid Spawn Areas/Spawn Area 4"]
+shape = SubResource("RectangleShape2D_pipwy")
+debug_color = Color(4.42803e-06, 0.629309, 0.483867, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="SpawnTimer" type="Timer" parent="Asteroid Spawn Areas/Spawn Area 4"]
+
+[node name="Spawn Area 5" type="Area2D" parent="Asteroid Spawn Areas" node_paths=PackedStringArray("PrefabParent")]
+position = Vector2(977, 847)
+rotation = 3.14159
+scale = Vector2(10, 10)
+script = ExtResource("6_bkhmc")
+Prefab = ExtResource("7_086tk")
+PrefabParent = NodePath("../../Asteroid Parent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid Spawn Areas/Spawn Area 5"]
+shape = SubResource("RectangleShape2D_pipwy")
+debug_color = Color(4.42803e-06, 0.629309, 0.483867, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="SpawnTimer" type="Timer" parent="Asteroid Spawn Areas/Spawn Area 5"]
+
+[node name="Spawn Area 6" type="Area2D" parent="Asteroid Spawn Areas" node_paths=PackedStringArray("PrefabParent")]
+position = Vector2(363, 850)
+rotation = 3.14159
+scale = Vector2(10, 10)
+script = ExtResource("6_bkhmc")
+Prefab = ExtResource("7_086tk")
+PrefabParent = NodePath("../../Asteroid Parent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid Spawn Areas/Spawn Area 6"]
+shape = SubResource("RectangleShape2D_pipwy")
+debug_color = Color(4.42803e-06, 0.629309, 0.483867, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="SpawnTimer" type="Timer" parent="Asteroid Spawn Areas/Spawn Area 6"]
+
+[node name="Spawn Area 7" type="Area2D" parent="Asteroid Spawn Areas" node_paths=PackedStringArray("PrefabParent")]
+position = Vector2(-151, 512)
+rotation = 3.14159
+scale = Vector2(10, 10)
+script = ExtResource("6_bkhmc")
+Prefab = ExtResource("7_086tk")
+PrefabParent = NodePath("../../Asteroid Parent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid Spawn Areas/Spawn Area 7"]
+shape = SubResource("RectangleShape2D_pipwy")
+debug_color = Color(4.42803e-06, 0.629309, 0.483867, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="SpawnTimer" type="Timer" parent="Asteroid Spawn Areas/Spawn Area 7"]
+
+[node name="Spawn Area 8" type="Area2D" parent="Asteroid Spawn Areas" node_paths=PackedStringArray("PrefabParent")]
+position = Vector2(-153, 171)
+rotation = 3.14159
+scale = Vector2(10, 10)
+script = ExtResource("6_bkhmc")
+Prefab = ExtResource("7_086tk")
+PrefabParent = NodePath("../../Asteroid Parent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid Spawn Areas/Spawn Area 8"]
+shape = SubResource("RectangleShape2D_pipwy")
+debug_color = Color(4.42803e-06, 0.629309, 0.483867, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="SpawnTimer" type="Timer" parent="Asteroid Spawn Areas/Spawn Area 8"]
 
 [node name="Bullet Parent" type="Node2D" parent="."]
 
@@ -163,3 +271,11 @@ metadata/_edit_lock_ = true
 [connection signal="body_entered" from="Borders/Bullet Remove Area2" to="Borders/Bullet Remove Area2" method="OnBodyEntered"]
 [connection signal="body_entered" from="Borders/Bullet Remove Area3" to="Borders/Bullet Remove Area3" method="OnBodyEntered"]
 [connection signal="body_entered" from="Borders/Bullet Remove Area4" to="Borders/Bullet Remove Area4" method="OnBodyEntered"]
+[connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 1/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 1" method="OnTimerTimeout"]
+[connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 2/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 2" method="OnTimerTimeout"]
+[connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 3/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 3" method="OnTimerTimeout"]
+[connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 4/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 4" method="OnTimerTimeout"]
+[connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 5/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 5" method="OnTimerTimeout"]
+[connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 6/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 6" method="OnTimerTimeout"]
+[connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 7/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 7" method="OnTimerTimeout"]
+[connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 8/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 8" method="OnTimerTimeout"]

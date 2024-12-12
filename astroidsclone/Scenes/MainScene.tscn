@@ -24,8 +24,8 @@ metadata/_edit_lock_ = true
 position = Vector2(585, 323)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="Player"]
-collision_layer = 5
-collision_mask = 5
+collision_layer = 13
+collision_mask = 13
 gravity_scale = 0.0
 script = ExtResource("1_rlj53")
 Speed = 50
@@ -138,6 +138,150 @@ script = ExtResource("5_e6pbg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Bullet Remove Area4"]
 shape = SubResource("RectangleShape2D_sfpyj")
 debug_color = Color(0.996043, 0, 0.194257, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover" type="Area2D" parent="Borders"]
+position = Vector2(1563, 381)
+scale = Vector2(-1.00091, 81.7367)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover2" type="Area2D" parent="Borders"]
+position = Vector2(-268, 440)
+scale = Vector2(-1.00091, 81.7367)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover2"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover9" type="Area2D" parent="Borders"]
+position = Vector2(-31, -273)
+scale = Vector2(-1.16069, -34.2593)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover9"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover10" type="Area2D" parent="Borders"]
+position = Vector2(1310, -288)
+scale = Vector2(-1.16069, -34.2593)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover10"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover11" type="Area2D" parent="Borders"]
+position = Vector2(1324, 1027)
+scale = Vector2(-1.16069, -34.2593)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover11"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover12" type="Area2D" parent="Borders"]
+position = Vector2(-36.0001, 1005)
+scale = Vector2(-1.16069, -34.2593)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover12"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover3" type="Area2D" parent="Borders"]
+position = Vector2(669, 1006)
+scale = Vector2(-157.754, 1.10691)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover3"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover4" type="Area2D" parent="Borders"]
+position = Vector2(669, -260)
+scale = Vector2(-157.754, 1.10691)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover4"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover5" type="Area2D" parent="Borders"]
+position = Vector2(1738, 40)
+scale = Vector2(42.7815, 1.52846)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover5"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover6" type="Area2D" parent="Borders"]
+position = Vector2(1746, 696)
+scale = Vector2(42.7815, 1.52846)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover6"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover7" type="Area2D" parent="Borders"]
+position = Vector2(-460, 676)
+scale = Vector2(42.7815, 1.52846)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover7"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Asteroid Remover8" type="Area2D" parent="Borders"]
+position = Vector2(-452, 51.0001)
+scale = Vector2(42.7815, 1.52846)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Asteroid Remover8"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.678182, 0.504925, 0, 0.42)
 metadata/_edit_lock_ = true
 
 [node name="Asteroid Spawn Areas" type="Node2D" parent="."]
@@ -271,6 +415,18 @@ metadata/_edit_lock_ = true
 [connection signal="body_entered" from="Borders/Bullet Remove Area2" to="Borders/Bullet Remove Area2" method="OnBodyEntered"]
 [connection signal="body_entered" from="Borders/Bullet Remove Area3" to="Borders/Bullet Remove Area3" method="OnBodyEntered"]
 [connection signal="body_entered" from="Borders/Bullet Remove Area4" to="Borders/Bullet Remove Area4" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover" to="Borders/Asteroid Remover" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover2" to="Borders/Asteroid Remover2" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover9" to="Borders/Asteroid Remover9" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover10" to="Borders/Asteroid Remover10" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover11" to="Borders/Asteroid Remover11" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover12" to="Borders/Asteroid Remover12" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover3" to="Borders/Asteroid Remover3" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover4" to="Borders/Asteroid Remover4" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover5" to="Borders/Asteroid Remover5" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover6" to="Borders/Asteroid Remover6" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover7" to="Borders/Asteroid Remover7" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Asteroid Remover8" to="Borders/Asteroid Remover8" method="OnBodyEntered"]
 [connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 1/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 1" method="OnTimerTimeout"]
 [connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 2/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 2" method="OnTimerTimeout"]
 [connection signal="timeout" from="Asteroid Spawn Areas/Spawn Area 3/SpawnTimer" to="Asteroid Spawn Areas/Spawn Area 3" method="OnTimerTimeout"]

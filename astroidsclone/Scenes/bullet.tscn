@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj4noyinsda6x"]
+
+[ext_resource type="Script" path="res://addons/2d_shapes/shapes/Ellipse.gd" id="1_gb40c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h0yjx"]
+radius = 2.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h0yjx")
+metadata/_edit_lock_ = true
+
+[node name="Ellipse" type="Node2D" parent="."]
+script = ExtResource("1_gb40c")
+size = Vector2(5, 5)
+circle = true
+outline_width = 0
+metadata/_edit_lock_ = true

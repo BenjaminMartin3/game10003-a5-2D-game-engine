@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://boqs6x2r3xd04"]
+[gd_scene load_steps=12 format=3 uid="uid://boqs6x2r3xd04"]
 
 [ext_resource type="Script" path="res://addons/2d_shapes/shapes/Triangle.gd" id="1_hifo1"]
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_rlj53"]
 [ext_resource type="PackedScene" uid="uid://dj4noyinsda6x" path="res://Scenes/bullet.tscn" id="2_vfxta"]
 [ext_resource type="Script" path="res://Scripts/Shoot.cs" id="4_mcgcb"]
 [ext_resource type="Script" path="res://Scripts/BulletRemoveArea.cs" id="5_e6pbg"]
+[ext_resource type="Script" path="res://Scripts/AsteroidSpawnArea.cs" id="6_bkhmc"]
+[ext_resource type="PackedScene" uid="uid://bxf3bo8cca00l" path="res://Scenes/Asteroid_Big.tscn" id="7_086tk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wowml"]
 size = Vector2(4, 4)
@@ -13,6 +15,8 @@ size = Vector2(4, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sfpyj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pipwy"]
+
 [node name="Scene" type="Node2D"]
 metadata/_edit_lock_ = true
 
@@ -20,6 +24,8 @@ metadata/_edit_lock_ = true
 position = Vector2(585, 323)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="Player"]
+collision_layer = 5
+collision_mask = 5
 gravity_scale = 0.0
 script = ExtResource("1_rlj53")
 Speed = 50
@@ -35,6 +41,8 @@ polygon = PackedVector2Array(-13, 18, 0, -18, 13, 18)
 
 [node name="Bullet Spawn Area" type="Area2D" parent="Player/RigidBody2D" node_paths=PackedStringArray("PrefabParent")]
 position = Vector2(0, -20)
+collision_layer = 5
+collision_mask = 5
 script = ExtResource("4_mcgcb")
 Prefab = ExtResource("2_vfxta")
 PrefabParent = NodePath("../../../Bullet Parent")
@@ -132,7 +140,24 @@ shape = SubResource("RectangleShape2D_sfpyj")
 debug_color = Color(0.996043, 0, 0.194257, 0.42)
 metadata/_edit_lock_ = true
 
+[node name="Asteroid Spawn Areas" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Asteroid Spawn Areas" node_paths=PackedStringArray("PrefabParent")]
+position = Vector2(300, -150)
+rotation = 3.14159
+scale = Vector2(10, 10)
+script = ExtResource("6_bkhmc")
+Prefab = ExtResource("7_086tk")
+PrefabParent = NodePath("../../Asteroid Parent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid Spawn Areas/Area2D"]
+shape = SubResource("RectangleShape2D_pipwy")
+debug_color = Color(4.42803e-06, 0.629309, 0.483867, 0.42)
+metadata/_edit_lock_ = true
+
 [node name="Bullet Parent" type="Node2D" parent="."]
+
+[node name="Asteroid Parent" type="Node2D" parent="."]
 
 [connection signal="body_entered" from="Borders/Bullet Remove Area" to="Borders/Bullet Remove Area" method="OnBodyEntered"]
 [connection signal="body_entered" from="Borders/Bullet Remove Area2" to="Borders/Bullet Remove Area2" method="OnBodyEntered"]

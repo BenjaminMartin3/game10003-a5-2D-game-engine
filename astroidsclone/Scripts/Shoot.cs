@@ -108,6 +108,5 @@ public partial class Shoot : Area2D
             bullet.ApplyImpulse(facingDirection * 500); 
         }
 
-        GD.Print(GlobalRotation); 
     }
 }

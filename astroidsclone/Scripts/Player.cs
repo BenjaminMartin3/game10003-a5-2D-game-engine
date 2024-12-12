@@ -10,8 +10,6 @@ public partial class Player : RigidBody2D
     [Export]
     public float RotationSpeed = 1000;
 
-  
-
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
@@ -65,7 +63,7 @@ public partial class Player : RigidBody2D
         // Input to boost the player forward
         if (Input.IsActionPressed("forward", true))
         {
-            ApplyCentralForce(facingDirection * (Speed + 50));
+            ApplyCentralForce(facingDirection * Speed);
         }
 
         // Input to turn the player left and right 

@@ -1,14 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://boqs6x2r3xd04"]
+[gd_scene load_steps=9 format=3 uid="uid://boqs6x2r3xd04"]
 
 [ext_resource type="Script" path="res://addons/2d_shapes/shapes/Triangle.gd" id="1_hifo1"]
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_rlj53"]
 [ext_resource type="PackedScene" uid="uid://dj4noyinsda6x" path="res://Scenes/bullet.tscn" id="2_vfxta"]
 [ext_resource type="Script" path="res://Scripts/Shoot.cs" id="4_mcgcb"]
+[ext_resource type="Script" path="res://Scripts/BulletRemoveArea.cs" id="5_e6pbg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wowml"]
 size = Vector2(4, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmn8b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfpyj"]
 
 [node name="Scene" type="Node2D"]
 metadata/_edit_lock_ = true
@@ -81,4 +84,57 @@ scale = Vector2(67.92, 1)
 shape = SubResource("RectangleShape2D_bmn8b")
 metadata/_edit_lock_ = true
 
+[node name="Bullet Remove Area" type="Area2D" parent="Borders"]
+position = Vector2(641, -10)
+scale = Vector2(81.72, 1)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Bullet Remove Area"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.996043, 0, 0.194257, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Bullet Remove Area2" type="Area2D" parent="Borders"]
+position = Vector2(635, 730)
+scale = Vector2(81.72, 1)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Bullet Remove Area2"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.996043, 0, 0.194257, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Bullet Remove Area3" type="Area2D" parent="Borders"]
+position = Vector2(-9.99998, 269)
+scale = Vector2(-1.00091, 81.7367)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Bullet Remove Area3"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.996043, 0, 0.194257, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="Bullet Remove Area4" type="Area2D" parent="Borders"]
+position = Vector2(1290, 387)
+scale = Vector2(-1.00091, 81.7367)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_e6pbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Bullet Remove Area4"]
+shape = SubResource("RectangleShape2D_sfpyj")
+debug_color = Color(0.996043, 0, 0.194257, 0.42)
+metadata/_edit_lock_ = true
+
 [node name="Bullet Parent" type="Node2D" parent="."]
+
+[connection signal="body_entered" from="Borders/Bullet Remove Area" to="Borders/Bullet Remove Area" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Bullet Remove Area2" to="Borders/Bullet Remove Area2" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Bullet Remove Area3" to="Borders/Bullet Remove Area3" method="OnBodyEntered"]
+[connection signal="body_entered" from="Borders/Bullet Remove Area4" to="Borders/Bullet Remove Area4" method="OnBodyEntered"]

@@ -76,8 +76,11 @@ public partial class Player : RigidBody2D
         {
             ApplyTorque(-RotationSpeed);
         }
+    }
 
-
+    private void GameOver()
+    {
+        GetTree().Quit();
     }
 }
 

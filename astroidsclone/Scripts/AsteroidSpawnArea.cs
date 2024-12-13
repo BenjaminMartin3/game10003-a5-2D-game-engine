@@ -16,6 +16,7 @@ public partial class AsteroidSpawnArea : Area2D
         spawnTimer.Timeout += OnTimerTimeout;
     }
 
+    // Make the "asteroids" spawn every 2.5 secs
     private void OnTimerTimeout()
     {
         RigidBody2D asteroid = Prefab.Instantiate<RigidBody2D>();

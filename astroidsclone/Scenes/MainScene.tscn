@@ -64,7 +64,6 @@ circle = true
 fill_color = Color(0, 1, 1, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player/RigidBody2D"]
-visible = false
 polygon = PackedVector2Array(-13, 18, 0, -18, 13, 18)
 
 [node name="Bullet Spawn Area" type="Area2D" parent="Player/RigidBody2D" node_paths=PackedStringArray("PrefabParent")]

@@ -6,7 +6,7 @@ Objective: Survive 1 min until your hyperdrive restores, don't crash into the UF
 
 Controls: 
 
-A to turn left
+A to turn left n/
 D to turn right
 W to boost forward 
 SPACE to shoot

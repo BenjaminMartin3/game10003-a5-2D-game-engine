@@ -77,8 +77,6 @@ public partial class Player : RigidBody2D
             ApplyTorque(-RotationSpeed);
         }
 
-        
-
 
     }
 }

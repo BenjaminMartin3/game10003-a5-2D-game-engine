@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://boqs6x2r3xd04"]
+[gd_scene load_steps=16 format=3 uid="uid://boqs6x2r3xd04"]
 
 [ext_resource type="Script" path="res://addons/2d_shapes/shapes/Triangle.gd" id="1_hifo1"]
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_rlj53"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Scripts/AsteroidSpawnArea.cs" id="6_bkhmc"]
 [ext_resource type="PackedScene" uid="uid://bxf3bo8cca00l" path="res://Scenes/Asteroid_Big.tscn" id="7_086tk"]
 [ext_resource type="PhysicsMaterial" uid="uid://dj3bdi3i4oe07" path="res://Physics Materials/Bouncy.tres" id="7_wc3u7"]
+[ext_resource type="Script" path="res://Scripts/SurvivalTimer.cs" id="11_kd8ii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wowml"]
 size = Vector2(4, 4)
@@ -441,6 +442,14 @@ metadata/_edit_lock_ = true
 [node name="Bullet Parent" type="Node2D" parent="."]
 
 [node name="Asteroid Parent" type="Node2D" parent="."]
+
+[node name="Survival Timer" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 8.0
+offset_right = 54.0
+offset_bottom = 31.0
+text = "{timeElapsed}"
+script = ExtResource("11_kd8ii")
 
 [connection signal="body_entered" from="Borders/Bullet Remove Area" to="Borders/Bullet Remove Area" method="OnBodyEntered"]
 [connection signal="body_entered" from="Borders/Bullet Remove Area2" to="Borders/Bullet Remove Area2" method="OnBodyEntered"]

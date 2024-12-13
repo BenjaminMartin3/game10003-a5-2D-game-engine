@@ -4,7 +4,6 @@ using static System.Formats.Asn1.AsnWriter;
 
 public partial class SurvivalTimer : Label
 {
-
     // Setup Timer
     float timeElapsed = 0.0f;
 

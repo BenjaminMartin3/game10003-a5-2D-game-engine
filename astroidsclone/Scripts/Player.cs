@@ -5,7 +5,7 @@ using System.Drawing;
 public partial class Player : RigidBody2D
 {
     [Export]
-    public int Speed = 100;
+    public int Speed = 200;
 
     [Export]
     public float RotationSpeed = 1000;

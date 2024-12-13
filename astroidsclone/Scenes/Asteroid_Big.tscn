@@ -20,8 +20,110 @@ script = ExtResource("1_emwvy")
 script = ExtResource("1_l5b3m")
 size = Vector2(60, 60)
 circle = true
+style = 2
+fill_color = Color(0.61339, 0.61339, 0.61339, 1)
+outline_color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Ellipse2" type="Node2D" parent="."]
+rotation = 3.14159
+scale = Vector2(0.573437, 0.573437)
+script = ExtResource("1_l5b3m")
+size = Vector2(60, 60)
+circle = true
+style = 2
+fill_color = Color(0.61339, 0.61339, 0.61339, 1)
+outline_color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Ellipse3" type="Node2D" parent="."]
+position = Vector2(0, -24)
+rotation = 3.14159
+scale = Vector2(0.573437, 0.573437)
+script = ExtResource("1_l5b3m")
+size = Vector2(12.6421, 12.6421)
+circle = true
+style = 2
+fill_color = Color(2.69532e-06, 0.681067, 0.829397, 1)
+outline_color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Ellipse4" type="Node2D" parent="."]
+position = Vector2(16, -17)
+rotation = 3.14159
+scale = Vector2(0.573437, 0.573437)
+script = ExtResource("1_l5b3m")
+size = Vector2(12.6421, 12.6421)
+circle = true
+style = 2
+fill_color = Color(2.69532e-06, 0.681067, 0.829397, 1)
+outline_color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Ellipse5" type="Node2D" parent="."]
+position = Vector2(23, 0)
+rotation = 3.14159
+scale = Vector2(0.573437, 0.573437)
+script = ExtResource("1_l5b3m")
+size = Vector2(12.6421, 12.6421)
+circle = true
+style = 2
+fill_color = Color(2.69532e-06, 0.681067, 0.829397, 1)
+outline_color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Ellipse6" type="Node2D" parent="."]
+position = Vector2(16, 17)
+rotation = 3.14159
+scale = Vector2(0.573437, 0.573437)
+script = ExtResource("1_l5b3m")
+size = Vector2(12.6421, 12.6421)
+circle = true
+style = 2
+fill_color = Color(2.69532e-06, 0.681067, 0.829397, 1)
+outline_color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Ellipse7" type="Node2D" parent="."]
+position = Vector2(0, 24)
+rotation = 3.14159
+scale = Vector2(0.573437, 0.573437)
+script = ExtResource("1_l5b3m")
+size = Vector2(12.6421, 12.6421)
+circle = true
+style = 2
+fill_color = Color(2.69532e-06, 0.681067, 0.829397, 1)
+outline_color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Ellipse8" type="Node2D" parent="."]
+position = Vector2(-16, 18)
+rotation = 3.14159
+scale = Vector2(0.573437, 0.573437)
+script = ExtResource("1_l5b3m")
+size = Vector2(12.6421, 12.6421)
+circle = true
+style = 2
+fill_color = Color(2.69532e-06, 0.681067, 0.829397, 1)
+outline_color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Ellipse9" type="Node2D" parent="."]
+position = Vector2(-23, 0)
+rotation = 3.14159
+scale = Vector2(0.573437, 0.573437)
+script = ExtResource("1_l5b3m")
+size = Vector2(12.6421, 12.6421)
+circle = true
+style = 2
+fill_color = Color(2.69532e-06, 0.681067, 0.829397, 1)
+outline_color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Ellipse10" type="Node2D" parent="."]
+position = Vector2(-16, -17)
+rotation = 3.14159
+scale = Vector2(0.573437, 0.573437)
+script = ExtResource("1_l5b3m")
+size = Vector2(12.6421, 12.6421)
+circle = true
+style = 2
+fill_color = Color(2.69532e-06, 0.681067, 0.829397, 1)
+outline_color = Color(0.470076, 0.470076, 0.470076, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_jptfv")
 
 [node name="Player Remove Area" type="Area2D" parent="."]
@@ -30,6 +132,7 @@ collision_mask = 8
 script = ExtResource("3_jb473")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player Remove Area"]
+visible = false
 shape = SubResource("CircleShape2D_e6bvn")
 debug_color = Color(0.662538, 0.513331, 0, 0.42)
 

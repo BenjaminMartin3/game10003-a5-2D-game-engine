@@ -23,6 +23,7 @@ script = ExtResource("1_gb40c")
 size = Vector2(5, 5)
 circle = true
 outline_width = 0
+fill_color = Color(1, 0, 0, 1)
 metadata/_edit_lock_ = true
 
 [node name="Asteroid Remove Area" type="Area2D" parent="."]

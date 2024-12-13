@@ -1,12 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://boqs6x2r3xd04"]
+[gd_scene load_steps=15 format=3 uid="uid://boqs6x2r3xd04"]
 
 [ext_resource type="Script" path="res://addons/2d_shapes/shapes/Triangle.gd" id="1_hifo1"]
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_rlj53"]
+[ext_resource type="Script" path="res://addons/2d_shapes/shapes/Rectangle.gd" id="2_5bfcl"]
 [ext_resource type="PackedScene" uid="uid://dj4noyinsda6x" path="res://Scenes/bullet.tscn" id="2_vfxta"]
+[ext_resource type="Script" path="res://addons/2d_shapes/shapes/Ellipse.gd" id="3_4j8j6"]
 [ext_resource type="Script" path="res://Scripts/Shoot.cs" id="4_mcgcb"]
 [ext_resource type="Script" path="res://Scripts/BulletRemoveArea.cs" id="5_e6pbg"]
 [ext_resource type="Script" path="res://Scripts/AsteroidSpawnArea.cs" id="6_bkhmc"]
 [ext_resource type="PackedScene" uid="uid://bxf3bo8cca00l" path="res://Scenes/Asteroid_Big.tscn" id="7_086tk"]
+[ext_resource type="PhysicsMaterial" uid="uid://dj3bdi3i4oe07" path="res://Physics Materials/Bouncy.tres" id="7_wc3u7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wowml"]
 size = Vector2(4, 4)
@@ -20,6 +23,13 @@ size = Vector2(4, 4)
 [node name="Scene" type="Node2D"]
 metadata/_edit_lock_ = true
 
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(623, 119)
+rotation = 3.14159
+scale = Vector2(324.902, 481.336)
+script = ExtResource("2_5bfcl")
+fill_color = Color(0, 0, 0, 1)
+
 [node name="Player" type="Node2D" parent="."]
 position = Vector2(585, 323)
 
@@ -31,12 +41,29 @@ script = ExtResource("1_rlj53")
 Speed = 50
 RotationSpeed = 500.0
 
+[node name="Rectangle" type="Node2D" parent="Player/RigidBody2D"]
+position = Vector2(0, 14)
+scale = Vector2(0.696666, 1.19071)
+script = ExtResource("2_5bfcl")
+size = Vector2(5, 8)
+corner_radius = 0.0
+fill_color = Color(0.762404, 0.762404, 0.762404, 1)
+
 [node name="Triangle" type="Node2D" parent="Player/RigidBody2D"]
 script = ExtResource("1_hifo1")
 size = Vector2(25, 35)
 corner_radius = 0.0
+fill_color = Color(0.687215, 0.687215, 0.687215, 1)
+
+[node name="Ellipse" type="Node2D" parent="Player/RigidBody2D"]
+position = Vector2(0, 3)
+script = ExtResource("3_4j8j6")
+size = Vector2(10, 10)
+circle = true
+fill_color = Color(0, 1, 1, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player/RigidBody2D"]
+visible = false
 polygon = PackedVector2Array(-13, 18, 0, -18, 13, 18)
 
 [node name="Bullet Spawn Area" type="Area2D" parent="Player/RigidBody2D" node_paths=PackedStringArray("PrefabParent")]
@@ -55,6 +82,7 @@ shape = SubResource("RectangleShape2D_wowml")
 [node name="Boader 1" type="StaticBody2D" parent="Borders"]
 position = Vector2(-168, -20)
 scale = Vector2(1.24, 1)
+physics_material_override = ExtResource("7_wc3u7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Boader 1"]
 position = Vector2(652, -10)
@@ -65,6 +93,7 @@ metadata/_edit_lock_ = true
 [node name="Boader 2" type="StaticBody2D" parent="Borders"]
 position = Vector2(-373, 760)
 scale = Vector2(1.48, 1)
+physics_material_override = ExtResource("7_wc3u7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Boader 2"]
 position = Vector2(652, -10)
@@ -75,6 +104,7 @@ metadata/_edit_lock_ = true
 [node name="Boader 3" type="StaticBody2D" parent="Borders"]
 position = Vector2(-40, 903)
 scale = Vector2(0.0142008, 60.5919)
+physics_material_override = ExtResource("7_wc3u7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Boader 3"]
 position = Vector2(652, -10)
@@ -85,6 +115,7 @@ metadata/_edit_lock_ = true
 [node name="Boader 4" type="StaticBody2D" parent="Borders"]
 position = Vector2(1300, 913)
 scale = Vector2(0.0142008, 53.9319)
+physics_material_override = ExtResource("7_wc3u7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Boader 4"]
 position = Vector2(652, -10)
